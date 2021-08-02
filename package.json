@@ -1,0 +1,23 @@
+{
+  "name": "insure-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "compile": "node-sass --watch sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/birkanTonkal/Insure-landing-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/birkanTonkal/Insure-landing-page/issues"
+  },
+  "homepage": "https://github.com/birkanTonkal/Insure-landing-page#readme"
+}
