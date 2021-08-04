@@ -48,6 +48,12 @@ ul {
   ul :visited, ul :link, ul :active {
     text-decoration: none; }
 
+.wrapper {
+  max-width: 117rem;
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto; }
+
 .btn {
   text-decoration: none;
   color: #2b272f;
@@ -397,9 +403,3 @@ footer {
         padding-bottom: 1.2rem; }
       .footer-bottom .link-head {
         padding: 2.5rem 0rem; } }
-
-.wrapper {
-  max-width: 117rem;
-  max-width: 80%;
-  margin-right: auto;
-  margin-left: auto; }
