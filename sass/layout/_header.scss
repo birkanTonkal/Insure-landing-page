@@ -1,6 +1,5 @@
-header {
-    position: relative;  
-    z-index: 0;
+header { 
+    z-index: 0; 
     height: 8rem;
     background-color: $color-light-gray;
     @media screen and (max-width: 650px){
@@ -19,8 +18,9 @@ header {
         align-items: center;
         background-color: $color-white;
         @media screen and (max-width: 650px){
-            position: fixed;
-            width: 88%;
+            position: sticky;
+            top: 0;
+            width: 96%;
             cursor: pointer;
             align-items: center;
             height: 6rem;
@@ -38,14 +38,14 @@ header {
             height: 100vh;
             font-size: 2rem;
             align-items: center;
-            z-index: 100;
             background-image: url(../../images/bg-pattern-mobile-nav.svg);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: bottom;
             &.active{
                 left: 0;
-                transition: 0.4s ease-in-out;
+                transition: 0.2s ease-in-out;
+                
             }
         }
     }

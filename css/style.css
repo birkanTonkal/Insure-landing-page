@@ -40,6 +40,14 @@ p {
   font-size: 1.5rem;
   font-weight: 100; }
 
+ul {
+  font-size: 1.3rem;
+  font-weight: 700;
+  list-style: none;
+  text-decoration: none; }
+  ul :visited, ul :link, ul :active {
+    text-decoration: none; }
+
 .btn {
   text-decoration: none;
   color: #2b272f;
@@ -52,7 +60,6 @@ p {
     transition: 0.5s; }
 
 header {
-  position: relative;
   z-index: 0;
   height: 8rem;
   background-color: #fafafa; }
@@ -71,8 +78,9 @@ header {
     background-color: #fff; }
     @media screen and (max-width: 650px) {
       header .nav-box {
-        position: fixed;
-        width: 88%;
+        position: sticky;
+        top: 0;
+        width: 96%;
         cursor: pointer;
         align-items: center;
         height: 6rem; } }
@@ -88,14 +96,13 @@ header {
       height: 100vh;
       font-size: 2rem;
       align-items: center;
-      z-index: 100;
       background-image: url(../../images/bg-pattern-mobile-nav.svg);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: bottom; }
       header .nav-box-items.active {
         left: 0;
-        transition: 0.4s ease-in-out; } }
+        transition: 0.2s ease-in-out; } }
   @media screen and (max-width: 650px) {
     header .nav-button {
       background-color: #2b272f;
@@ -144,19 +151,18 @@ header {
 
 .section1 {
   position: relative;
-  z-index: 0;
   height: 50rem;
   background-color: #2d2640; }
-  .section1::before {
+  .section1:before {
     content: "";
     background: url(../../images/bg-pattern-intro-right-desktop.svg) no-repeat;
-    background-position: right 0 bottom 0;
+    background-position: right 0 bottom 6rem;
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 1; }
+    z-index: 2; }
     @media screen and (max-width: 650px) {
-      .section1::before {
+      .section1:before {
         background-image: url(../../images/image-intro-desktop.jpg);
         background-position: 0;
         background-size: cover;
@@ -186,10 +192,10 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
-    z-index: 1;
     max-width: 45%;
-    height: 100%; }
+    height: 100%;
+    z-index: 6;
+    position: relative; }
     .section1-text .head1 {
       margin-bottom: 2rem; }
       .section1-text .head1::before {
@@ -207,19 +213,18 @@ header {
         max-width: 86%;
         padding-bottom: 7rem;
         align-items: center;
-        text-align: center;
-        background: url(..//../images/); } }
+        text-align: center; } }
   .section1-button {
     color: #fafafa;
     width: 14.5rem;
-    margin-top: 3rem; }
+    margin-top: 3rem;
+    text-align: center; }
     .section1-button:hover {
       background-color: #fafafa;
       color: #2d2640; }
   .section1-img {
     position: relative;
-    inset: -80% 0 0 55%;
-    z-index: 0; }
+    inset: -85% 0 0 62%; }
     .section1-img img {
       position: absolute;
       max-width: 35%;
@@ -229,11 +234,10 @@ header {
           max-width: 45%; } }
 
 .section2 {
-  height: 120vh;
-  background-color: #fafafa; }
+  height: 112vh; }
   @media screen and (max-width: 650px) {
     .section2 {
-      height: 150vh; } }
+      height: 150rem; } }
   .section2 .wrapper {
     height: 100%; }
   .section2::before {
@@ -244,13 +248,16 @@ header {
     height: 40%;
     top: 50%;
     background: url(..//../images/bg-pattern-intro-left-desktop.svg) no-repeat;
-    background-size: contain; }
+    background-size: contain;
+    z-index: 0; }
     @media screen and (max-width: 650px) {
       .section2::before {
-        top: 105%;
+        top: 120%;
+        right: 0;
         background: url(..//../images/bg-pattern-intro-right-mobile.svg) no-repeat;
         background-position: right;
-        width: 100%; } }
+        background-size: contain;
+        width: 30%; } }
   .section2-box {
     height: auto;
     display: flex;
@@ -320,12 +327,76 @@ header {
       @media screen and (max-width: 650px) {
         .section2-box-find {
           flex-direction: column;
-          height: 25rem;
+          height: 35rem;
           text-align: center;
           background-size: cover;
           background-position: top 0 right -5rem; }
+          .section2-box-find h1 {
+            padding-top: 2rem;
+            width: 80%; }
           .section2-box-find .section2-btn {
-            height: 15%; } }
+            text-align: center;
+            height: 11%;
+            margin-bottom: 5rem; } }
+
+footer {
+  background-color: #fafafa;
+  height: 40vh;
+  background: url(..//..//images/bg-pattern-footer-desktop.svg) no-repeat;
+  background-position: top left; }
+  @media screen and (max-width: 650px) {
+    footer {
+      height: 100vh;
+      background: url(..//..//images/bg-pattern-footer-mobile.svg) no-repeat; } }
+
+.footer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  border-bottom: solid rgba(131, 125, 135, 0.5) 0.1rem; }
+  .footer-head .footer-icon-box a {
+    margin-right: 0.8rem;
+    text-decoration: none; }
+    .footer-head .footer-icon-box a:hover path {
+      fill: #2b272f;
+      transition: 0.2s ease; }
+  @media screen and (max-width: 650px) {
+    .footer-head {
+      height: 20rem;
+      flex-direction: column;
+      justify-content: center; }
+      .footer-head .footer-icon-box, .footer-head .footer-logo-box {
+        padding-top: 2rem; } }
+  .footer-head .footer-icon-box, .footer-head .footer-logo-box {
+    padding-top: 5rem; }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  width: 75%; }
+  .footer-bottom-list .link {
+    padding-bottom: 1rem; }
+    .footer-bottom-list .link a {
+      color: #2d2640; }
+    .footer-bottom-list .link :hover {
+      text-decoration: underline; }
+  .footer-bottom-list .link-head {
+    padding: 3rem 0rem; }
+    .footer-bottom-list .link-head a {
+      color: #837d87; }
+  @media screen and (max-width: 650px) {
+    .footer-bottom {
+      padding-bottom: 10rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%; }
+      .footer-bottom .link {
+        padding-bottom: 1.2rem; }
+      .footer-bottom .link-head {
+        padding: 2.5rem 0rem; } }
 
 .wrapper {
   max-width: 117rem;

@@ -31,3 +31,14 @@ p {
     font-size: 1.5rem;
     font-weight: 100;
 }
+
+ul {
+    font-size: 1.3rem;
+    font-weight: 700;
+    list-style: none;
+    text-decoration: none;
+    :visited, :link, :active{
+        text-decoration: none;
+    }
+
+}

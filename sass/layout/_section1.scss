@@ -1,0 +1,102 @@
+.section1 {
+  position: relative;
+  &:before {
+    content: "";
+    background: url(../../images/bg-pattern-intro-right-desktop.svg) no-repeat;
+    background-position: right 0 bottom 6rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    @media screen and (max-width: 650px) {
+      background-image: url(../../images/image-intro-desktop.jpg);
+      background-position: 0;
+      background-size: cover;
+      height: 55%;
+    }
+  }
+  height: 50rem;
+  background-color: $color-primary;
+  @media screen and (max-width: 650px) {
+    height: 100rem;
+  }
+  .wrapper {
+    height: 100%;
+  }
+
+  &-box {
+    height: 100%;
+    
+    @media screen and (max-width: 650px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20rem;
+        height: 28rem;
+        inset: 55% 50% 0 0;
+        background: url(..//..//images/bg-pattern-intro-left-mobile.svg)
+          no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 45%;
+    height: 100%;
+    z-index: 6;
+    position: relative;
+    .head1 {
+      margin-bottom: 2rem;
+      &::before {
+        content: "";
+        display: block;
+        margin-bottom: 5rem;
+        width: 25%;
+        border-top: 0.1rem solid $color-light-gray;
+        @media screen and (max-width: 650px) {
+          content: none;
+        }
+      }
+    }
+    @media screen and (max-width: 650px) {
+      height: auto;
+      max-width: 86%;
+      padding-bottom: 7rem;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &-button {
+    color: $color-light-gray;
+    width: 14.5rem;
+    margin-top: 3rem;
+    text-align: center;
+    &:hover {
+      background-color: $color-light-gray;
+      color: $color-primary;
+    }
+  }
+  &-img {
+    position: relative;
+    inset: -85% 0 0 62%;
+    img {
+      position: absolute;
+      max-width: 35%;
+      height: auto;
+      @media screen and (max-width: 1300px) {
+        max-width: 45%;
+      }
+    }
+  }
+
+}
+
