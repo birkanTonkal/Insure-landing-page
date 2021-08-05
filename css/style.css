@@ -19,7 +19,7 @@ body {
 h1 {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
-  font-size: 5rem;
+  font-size: 5.6rem;
   color: #fafafa;
   line-height: 1; }
 
@@ -37,7 +37,7 @@ h3 {
 p {
   font-family: "Karla", sans-serif;
   color: #fafafa;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 100; }
 
 ul {
@@ -198,7 +198,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 45%;
+    max-width: 40%;
     height: 100%;
     z-index: 6;
     position: relative; }
@@ -258,8 +258,7 @@ header {
     z-index: 0; }
     @media screen and (max-width: 650px) {
       .section2::before {
-        top: 120%;
-        right: 0;
+        inset: 110% 70%;
         background: url(..//../images/bg-pattern-intro-right-mobile.svg) no-repeat;
         background-position: right;
         background-size: contain;

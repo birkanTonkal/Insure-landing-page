@@ -18,8 +18,7 @@
       background-size: contain;
       z-index: 0;
       @media screen and (max-width: 650px) {
-          top: 120%;
-          right: 0;
+          inset: 110% 70%;
           background: url(..//../images/bg-pattern-intro-right-mobile.svg) no-repeat;
           background-position: right;
           background-size: contain;
