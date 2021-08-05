@@ -219,7 +219,11 @@ header {
         max-width: 86%;
         padding-bottom: 7rem;
         align-items: center;
-        text-align: center; } }
+        text-align: center; }
+        .section1-text h1 {
+          font-size: 5rem; }
+        .section1-text p {
+          font-size: 1.7rem; } }
   .section1-button {
     color: #fafafa;
     width: 14.5rem;
